@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,shrink-to-fit=no" />
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate" />
+<meta http-equiv="Expires" content="0" />
+<meta http-equiv="Pragma" content="no-cache" />
+<title>EUMC EMS</title>
+<link rel="shortcut icon" href="images/favicon_eumc.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+<link rel="stylesheet" href="css/common.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<!--[if lt IE 9]>
+    <script src="/js/html5shiv.js"></script>
+    <script src="/js/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/popper.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+<div id="container" class="container-fuid">
+	<section class="content">
+		<nav class="lnb" id="lnb" style="background-color: #00583d;">
+			<div class="close_button">
+				<a class="close_toggle text_out" href="#">
+					<img src="images/close_icon.png" alt="CLOSE">
+				</a>
+			</div>
+			<div class="logo_wrap">
+				<a href="dashboard.html">
+					<div class="logo text-center"></div>
+				</a>			
+			</div>
+			<div class="profile row align-items-center" style="margin-left: 0;">
+				<div class="pr_txt col-9">
+					<div class="pt_txt">홍길동</div>
+					<div class="pt_level">Administrator</div>
+				</div>
+				<button type="button" class="btn_logout" onclick="location.href='index.html'">
+					<img src="images/btn_logout.png" alt="log_out" class="logout">
+					<img src="images/btn_logout_b.png" alt="log_out" class="logout_b">
+				</button>
+			</div>
+			<div class="lnb_menu">
+				<button type="button" class="btn_lm" onclick="location.href='dashboard.html'">검사실 대기현황</button>
+				<button type="button" class="btn_lm" onclick="location.href='wait_list.html'">수진자 대기현황</button>
+				<button type="button" class="btn_lm" onclick="location.href='cur_progress.html'">수진자 진행현황</button>
+				<button type="button" class="btn_lm_focus">예약 List</button>
+			</div>
+		</nav>
+		<main>
+			<div class="cont" style="padding-right: 1em;">
+				<div class="dim"></div>
+				<div class="cont_tit">
+					<div class="nav_button">
+						<a class="nav_toggle text_out" href="#">
+							<img src="images/menu_icon.png" alt="MENU">
+						</a>
+					</div>
+                    <div class="tit_txt"><span>예약 List</span></div>
+                    <div class="toggle_wrap">
+                        <div class="toggle_group">
+                            <button type="button" class="btn_all active">
+                                <div>전체</div>
+                            </button>
+                            <button type="button" class="btn_not">
+                                <div>미도착</div>
+                            </button>
+                            <button type="button" class="btn_arr">
+                                <div>도착</div>
+                            </button>
+                            <button type="button" class="btn_dur">
+                                <div>검진중</div>
+                            </button>
+                            <button type="button" class="btn_com">
+                                <div>완료</div>
+                            </button>
+                        </div>
+                    </div>
+				</div>
+				<div class="cont_table">
+					<div class="row no-gutters">
+						<div class="table-responsive-sm col-md-12">
+                            <table class="table table_01 table_04 table_all">
+								<thead>
+									<tr class="row">
+										<th class="col-4 col-sm column1">
+											<span>이름</span>
+										</th>
+										<th class="col-4 col-sm-2 column2">
+											<span>성별/나이</span>
+										</th>
+										<th class="col-4 col-sm column3">
+											<span>검진상태</span>
+                                        </th>
+                                        <th class="col col-sm column4">
+											<span></span>
+                                        </th>
+                                        <th class="col col-sm column5">
+											<span></span>
+                                        </th>
+                                        <th class="col col-sm column6">
+											<span></span>
+                                        </th>
+                                        <th class="col col-sm column7">
+											<span>상태</span>
+                                        </th>
+                                        <th class="col col-sm-2 column8">
+											<span></span>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="row">
+                                        <td class="col-4 col-sm column1">
+											<span>홍길동</span>
+										</td>
+										<td class="col-4 col-sm-2 column2">
+											<span>남/1999-01-01</span>
+										</td>
+										<td class="col-4 col-sm column3">
+											<span>종합검진</span>
+                                        </td>
+                                        <td class="col col-sm column4">
+											<span>REM1</span>
+                                        </td>
+                                        <td class="col col-sm column5">
+											<span>REM2</span>
+                                        </td>
+                                        <td class="col col-sm column6">
+											<span>REM3</span>
+                                        </td>
+                                        <td class="col col-sm column7">
+											<span class="col_arr">도착</span>
+                                        </td>
+                                        <td class="col col-sm-2 column8">
+                                            <span></span>
+										</td>
+                                    </tr>
+                                    <tr class="row">
+                                        <td class="col-4 col-sm column1">
+											<span>홍길동</span>
+										</td>
+										<td class="col-4 col-sm-2 column2">
+											<span>남/1999-01-01</span>
+										</td>
+										<td class="col-4 col-sm column3">
+											<span>종합검진</span>
+                                        </td>
+                                        <td class="col col-sm column4">
+											<span>REM1</span>
+                                        </td>
+                                        <td class="col col-sm column5">
+											<span>REM2</span>
+                                        </td>
+                                        <td class="col col-sm column6">
+											<span>REM3</span>
+                                        </td>
+                                        <td class="col col-sm column7">
+											<span class="col_not">미도착</span>
+                                        </td>
+                                        <td class="col  col-sm-2 column8">
+                                            <div class="arrive">
+                                                <button type="button" class="chk_button">
+                                                    <div>도착확인</div>
+                                                </button>
+                                            </div>
+										</td>
+                                    </tr>
+                                    <tr class="row">
+                                        <td class="col-4 col-sm column1">
+											<span>홍길동</span>
+										</td>
+										<td class="col-4 col-sm-2 column2">
+											<span>남/1999-01-01</span>
+										</td>
+										<td class="col-4 col-sm column3">
+											<span>종합검진</span>
+                                        </td>
+                                        <td class="col col-sm column4">
+											<span>REM1</span>
+                                        </td>
+                                        <td class="col col-sm column5">
+											<span>REM2</span>
+                                        </td>
+                                        <td class="col col-sm column6">
+											<span>REM3</span>
+                                        </td>
+                                        <td class="col col-sm column7">
+											<span class="col_com">완료</span>
+                                        </td>
+                                        <td class="col col-sm-2 column8">
+                                            <span></span>
+										</td>
+                                    </tr>
+                                    <tr class="row">
+                                        <td class="col-4 col-sm column1">
+											<span>홍길동</span>
+										</td>
+										<td class="col-4 col-sm-2 column2">
+											<span>남/1999-01-01</span>
+										</td>
+										<td class="col-4 col-sm column3">
+											<span>종합검진</span>
+                                        </td>
+                                        <td class="col col-sm column4">
+											<span>REM1</span>
+                                        </td>
+                                        <td class="col col-sm column5">
+											<span>REM2</span>
+                                        </td>
+                                        <td class="col col-sm column6">
+											<span>REM3</span>
+                                        </td>
+                                        <td class="col col-sm column7">
+											<span class="col_dur">검진중</span>
+                                        </td>
+                                        <td class="col col-sm-2 column8">
+                                            <span></span>
+										</td>
+									</tr>
+								</tbody>
+                            </table>
+                            <table class="table table_01 table_04 table_not">
+								<thead>
+									<tr class="row">
+										<th class="col-4 col-sm column1">
+											<span>이름</span>
+										</th>
+										<th class="col-4 col-sm-2 column2">
+											<span>성별/나이</span>
+										</th>
+										<th class="col-4 col-sm column3">
+											<span>검진상태</span>
+                                        </th>
+                                        <th class="col col-sm column4">
+											<span></span>
+                                        </th>
+                                        <th class="col col-sm column5">
+											<span></span>
+                                        </th>
+                                        <th class="col col-sm column6">
+											<span></span>
+                                        </th>
+                                        <th class="col col-sm column7">
+											<span>상태</span>
+                                        </th>
+                                        <th class="col col-sm-2 column8">
+											<span></span>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="row">
+                                        <td class="col-4 col-sm column1">
+											<span>홍길동</span>
+										</td>
+										<td class="col-4 col-sm-2 column2">
+											<span>남/1999-01-01</span>
+										</td>
+										<td class="col-4 col-sm column3">
+											<span>종합검진</span>
+                                        </td>
+                                        <td class="col col-sm column4">
+											<span>REM1</span>
+                                        </td>
+                                        <td class="col col-sm column5">
+											<span>REM2</span>
+                                        </td>
+                                        <td class="col col-sm column6">
+											<span>REM3</span>
+                                        </td>
+                                        <td class="col col-sm column7">
+											<span class="col_not">미도착</span>
+                                        </td>
+                                        <td class="col col-sm-2 column8">
+                                            <div class="arrive">
+                                                <button type="button" class="chk_button">
+                                                    <div>도착확인</div>
+                                                </button>
+                                            </div>
+										</td>
+                                    </tr>
+                                    <tr class="row">
+                                        <td class="col-4 col-sm column1">
+											<span>홍길동</span>
+										</td>
+										<td class="col-4 col-sm-2 column2">
+											<span>남/1999-01-01</span>
+										</td>
+										<td class="col-4 col-sm column3">
+											<span>종합검진</span>
+                                        </td>
+                                        <td class="col col-sm column4">
+											<span>REM1</span>
+                                        </td>
+                                        <td class="col col-sm column5">
+											<span>REM2</span>
+                                        </td>
+                                        <td class="col col-sm column6">
+											<span>REM3</span>
+                                        </td>
+                                        <td class="col col-sm column7">
+											<span class="col_not">미도착</span>
+                                        </td>
+                                        <td class="col col-sm-2 column8">
+                                            <div class="arrive">
+                                                <button type="button" class="chk_button">
+                                                    <div>도착확인</div>
+                                                </button>
+                                            </div>
+										</td>
+                                    </tr>
+                                    <tr class="row">
+                                        <td class="col-4 col-sm column1">
+											<span>홍길동</span>
+										</td>
+										<td class="col-4 col-sm-2 column2">
+											<span>남/1999-01-01</span>
+										</td>
+										<td class="col-4 col-sm column3">
+											<span>종합검진</span>
+                                        </td>
+                                        <td class="col col-sm column4">
+											<span>REM1</span>
+                                        </td>
+                                        <td class="col col-sm column5">
+											<span>REM2</span>
+                                        </td>
+                                        <td class="col col-sm column6">
+											<span>REM3</span>
+                                        </td>
+                                        <td class="col col-sm column7">
+											<span class="col_not">미도착</span>
+                                        </td>
+                                        <td class="col col-sm-2 column8">
+                                            <div class="arrive">
+                                                <button type="button" class="chk_button">
+                                                    <div>도착확인</div>
+                                                </button>
+                                            </div>
+										</td>
+                                    </tr>
+                                    <tr class="row">
+                                        <td class="col-4 col-sm column1">
+											<span>홍길동</span>
+										</td>
+										<td class="col-4 col-sm-2 column2">
+											<span>남/1999-01-01</span>
+										</td>
+										<td class="col-4 col-sm column3">
+											<span>종합검진</span>
+                                        </td>
+                                        <td class="col col-sm column4">
+											<span>REM1</span>
+                                        </td>
+                                        <td class="col col-sm column5">
+											<span>REM2</span>
+                                        </td>
+                                        <td class="col col-sm column6">
+											<span>REM3</span>
+                                        </td>
+                                        <td class="col col-sm column7">
+											<span class="col_not">미도착</span>
+                                        </td>
+                                        <td class="col col-sm-2 column8">
+                                            <div class="arrive">
+                                                <button type="button" class="chk_button">
+                                                    <div>도착확인</div>
+                                                </button>
+                                            </div>
+										</td>
+									</tr>
+								</tbody>
+                            </table>
+                            <table class="table table_01 table_04 table_arr">
+								<thead>
+									<tr class="row">
+										<th class="col-4 col-sm column1">
+											<span>이름</span>
+										</th>
+										<th class="col-4 col-sm-2 column2">
+											<span>성별/나이</span>
+										</th>
+										<th class="col-4 col-sm column3">
+											<span>검진상태</span>
+                                        </th>
+                                        <th class="col col-sm column4">
+											<span></span>
+                                        </th>
+                                        <th class="col col-sm column5">
+											<span></span>
+                                        </th>
+                                        <th class="col col-sm column6">
+											<span></span>
+                                        </th>
+                                        <th class="col col-sm column7">
+											<span>상태</span>
+                                        </th>
+                                        <th class="col col-sm-2 column8">
+											<span></span>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="row">
+                                        <td class="col-4 col-sm column1">
+											<span>홍길동</span>
+										</td>
+										<td class="col-4 col-sm-2 column2">
+											<span>남/1999-01-01</span>
+										</td>
+										<td class="col-4 col-sm column3">
+											<span>종합검진</span>
+                                        </td>
+                                        <td class="col col-sm column4">
+											<span>REM1</span>
+                                        </td>
+                                        <td class="col col-sm column5">
+											<span>REM2</span>
+                                        </td>
+                                        <td class="col col-sm column6">
+											<span>REM3</span>
+                                        </td>
+                                        <td class="col col-sm column7">
+											<span class="col_arr">도착</span>
+                                        </td>
+                                        <td class="col col-sm-2 column8">
+                                            <span></span>
+										</td>
+                                    </tr>
+                                    <tr class="row">
+                                        <td class="col-4 col-sm column1">
+											<span>홍길동</span>
+										</td>
+										<td class="col-4 col-sm-2 column2">
+											<span>남/1999-01-01</span>
+										</td>
+										<td class="col-4 col-sm column3">
+											<span>종합검진</span>
+                                        </td>
+                                        <td class="col col-sm column4">
+											<span>REM1</span>
+                                        </td>
+                                        <td class="col col-sm column5">
+											<span>REM2</span>
+                                        </td>
+                                        <td class="col col-sm column6">
+											<span>REM3</span>
+                                        </td>
+                                        <td class="col col-sm column7">
+											<span class="col_arr">도착</span>
+                                        </td>
+                                        <td class="col col-sm-2 column8">
+                                            <span></span>
+										</td>
+                                    </tr>
+                                    <tr class="row">
+                                        <td class="col-4 col-sm column1">
+											<span>홍길동</span>
+										</td>
+										<td class="col-4 col-sm-2 column2">
+											<span>남/1999-01-01</span>
+										</td>
+										<td class="col-4 col-sm column3">
+											<span>종합검진</span>
+                                        </td>
+                                        <td class="col col-sm column4">
+											<span>REM1</span>
+                                        </td>
+                                        <td class="col col-sm column5">
+											<span>REM2</span>
+                                        </td>
+                                        <td class="col col-sm column6">
+											<span>REM3</span>
+                                        </td>
+                                        <td class="col col-sm column7">
+											<span class="col_arr">도착</span>
+                                        </td>
+                                        <td class="col col-sm-2 column8">
+                                            <span></span>
+										</td>
+                                    </tr>
+                                    <tr class="row">
+                                        <td class="col-4 col-sm column1">
+											<span>홍길동</span>
+										</td>
+										<td class="col-4 col-sm-2 column2">
+											<span>남/1999-01-01</span>
+										</td>
+										<td class="col-4 col-sm column3">
+											<span>종합검진</span>
+                                        </td>
+                                        <td class="col col-sm column4">
+											<span>REM1</span>
+                                        </td>
+                                        <td class="col col-sm column5">
+											<span>REM2</span>
+                                        </td>
+                                        <td class="col col-sm column6">
+											<span>REM3</span>
+                                        </td>
+                                        <td class="col col-sm column7">
+											<span class="col_arr">도착</span>
+                                        </td>
+                                        <td class="col col-sm-2 column8">
+                                            <span></span>
+										</td>
+									</tr>
+								</tbody>
+                            </table>
+                            <table class="table table_01 table_04 table_dur">
+								<thead>
+									<tr class="row">
+										<th class="col-4 col-sm column1">
+											<span>이름</span>
+										</th>
+										<th class="col-4 col-sm-2 column2">
+											<span>성별/나이</span>
+										</th>
+										<th class="col-4 col-sm column3">
+											<span>검진상태</span>
+                                        </th>
+                                        <th class="col col-sm column4">
+											<span></span>
+                                        </th>
+                                        <th class="col col-sm column5">
+											<span></span>
+                                        </th>
+                                        <th class="col col-sm column6">
+											<span></span>
+                                        </th>
+                                        <th class="col col-sm column7">
+											<span>상태</span>
+                                        </th>
+                                        <th class="col col-sm-2 column8">
+											<span></span>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="row">
+                                        <td class="col-4 col-sm column1">
+											<span>홍길동</span>
+										</td>
+										<td class="col-4 col-sm-2 column2">
+											<span>남/1999-01-01</span>
+										</td>
+										<td class="col-4 col-sm column3">
+											<span>종합검진</span>
+                                        </td>
+                                        <td class="col col-sm column4">
+											<span>REM1</span>
+                                        </td>
+                                        <td class="col col-sm column5">
+											<span>REM2</span>
+                                        </td>
+                                        <td class="col col-sm column6">
+											<span>REM3</span>
+                                        </td>
+                                        <td class="col col-sm column7">
+											<span class="col_dur">검진중</span>
+                                        </td>
+                                        <td class="col col-sm-2 column8">
+                                            <span></span>
+										</td>
+                                    </tr>
+                                    <tr class="row">
+                                        <td class="col-4 col-sm column1">
+											<span>홍길동</span>
+										</td>
+										<td class="col-4 col-sm-2 column2">
+											<span>남/1999-01-01</span>
+										</td>
+										<td class="col-4 col-sm column3">
+											<span>종합검진</span>
+                                        </td>
+                                        <td class="col col-sm column4">
+											<span>REM1</span>
+                                        </td>
+                                        <td class="col col-sm column5">
+											<span>REM2</span>
+                                        </td>
+                                        <td class="col col-sm column6">
+											<span>REM3</span>
+                                        </td>
+                                        <td class="col col-sm column7">
+											<span class="col_dur">검진중</span>
+                                        </td>
+                                        <td class="col col-sm-2 column8">
+                                            <span></span>
+										</td>
+                                    </tr>
+                                    <tr class="row">
+                                        <td class="col-4 col-sm column1">
+											<span>홍길동</span>
+										</td>
+										<td class="col-4 col-sm-2 column2">
+											<span>남/1999-01-01</span>
+										</td>
+										<td class="col-4 col-sm column3">
+											<span>종합검진</span>
+                                        </td>
+                                        <td class="col col-sm column4">
+											<span>REM1</span>
+                                        </td>
+                                        <td class="col col-sm column5">
+											<span>REM2</span>
+                                        </td>
+                                        <td class="col col-sm column6">
+											<span>REM3</span>
+                                        </td>
+                                        <td class="col col-sm column7">
+											<span class="col_dur">검진중</span>
+                                        </td>
+                                        <td class="col col-sm-2 column8">
+                                            <span></span>
+										</td>
+                                    </tr>
+                                    <tr class="row">
+                                        <td class="col-4 col-sm column1">
+											<span>홍길동</span>
+										</td>
+										<td class="col-4 col-sm-2 column2">
+											<span>남/1999-01-01</span>
+										</td>
+										<td class="col-4 col-sm column3">
+											<span>종합검진</span>
+                                        </td>
+                                        <td class="col col-sm column4">
+											<span>REM1</span>
+                                        </td>
+                                        <td class="col col-sm column5">
+											<span>REM2</span>
+                                        </td>
+                                        <td class="col col-sm column6">
+											<span>REM3</span>
+                                        </td>
+                                        <td class="col col-sm column7">
+											<span class="col_dur">검진중</span>
+                                        </td>
+                                        <td class="col col-sm-2 column8">
+                                            <span></span>
+										</td>
+									</tr>
+								</tbody>
+                            </table>
+                            <table class="table table_01 table_04 table_com">
+								<thead>
+									<tr class="row">
+										<th class="col-4 col-sm column1">
+											<span>이름</span>
+										</th>
+										<th class="col-4 col-sm-2 column2">
+											<span>성별/나이</span>
+										</th>
+										<th class="col-4 col-sm column3">
+											<span>검진상태</span>
+                                        </th>
+                                        <th class="col col-sm column4">
+											<span></span>
+                                        </th>
+                                        <th class="col col-sm column5">
+											<span></span>
+                                        </th>
+                                        <th class="col col-sm column6">
+											<span></span>
+                                        </th>
+                                        <th class="col col-sm column7">
+											<span>상태</span>
+                                        </th>
+                                        <th class="col col-sm-2 column8">
+											<span></span>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="row">
+                                        <td class="col-4 col-sm column1">
+											<span>홍길동</span>
+										</td>
+										<td class="col-4 col-sm-2 column2">
+											<span>남/1999-01-01</span>
+										</td>
+										<td class="col-4 col-sm column3">
+											<span>종합검진</span>
+                                        </td>
+                                        <td class="col col-sm column4">
+											<span>REM1</span>
+                                        </td>
+                                        <td class="col col-sm column5">
+											<span>REM2</span>
+                                        </td>
+                                        <td class="col col-sm column6">
+											<span>REM3</span>
+                                        </td>
+                                        <td class="col col-sm column7">
+											<span class="col_com">완료</span>
+                                        </td>
+                                        <td class="col col-sm-2 column8">
+                                            <span></span>
+										</td>
+                                    </tr>
+                                    <tr class="row">
+                                        <td class="col-4 col-sm column1">
+											<span>홍길동</span>
+										</td>
+										<td class="col-4 col-sm-2 column2">
+											<span>남/1999-01-01</span>
+										</td>
+										<td class="col-4 col-sm column3">
+											<span>종합검진</span>
+                                        </td>
+                                        <td class="col col-sm column4">
+											<span>REM1</span>
+                                        </td>
+                                        <td class="col col-sm column5">
+											<span>REM2</span>
+                                        </td>
+                                        <td class="col col-sm column6">
+											<span>REM3</span>
+                                        </td>
+                                        <td class="col col-sm column7">
+											<span class="col_com">완료</span>
+                                        </td>
+                                        <td class="col col-sm-2 column8">
+                                            <span></span>
+										</td>
+                                    </tr>
+                                    <tr class="row">
+                                        <td class="col-4 col-sm column1">
+											<span>홍길동</span>
+										</td>
+										<td class="col-4 col-sm-2 column2">
+											<span>남/1999-01-01</span>
+										</td>
+										<td class="col-4 col-sm column3">
+											<span>종합검진</span>
+                                        </td>
+                                        <td class="col col-sm column4">
+											<span>REM1</span>
+                                        </td>
+                                        <td class="col col-sm column5">
+											<span>REM2</span>
+                                        </td>
+                                        <td class="col col-sm column6">
+											<span>REM3</span>
+                                        </td>
+                                        <td class="col col-sm column7">
+											<span class="col_com">완료</span>
+                                        </td>
+                                        <td class="col col-sm-2 column8">
+                                            <span></span>
+										</td>
+                                    </tr>
+                                    <tr class="row">
+                                        <td class="col-4 col-sm column1">
+											<span>홍길동</span>
+										</td>
+										<td class="col-4 col-sm-2 column2">
+											<span>남/1999-01-01</span>
+										</td>
+										<td class="col-4 col-sm column3">
+											<span>종합검진</span>
+                                        </td>
+                                        <td class="col col-sm column4">
+											<span>REM1</span>
+                                        </td>
+                                        <td class="col col-sm column5">
+											<span>REM2</span>
+                                        </td>
+                                        <td class="col col-sm column6">
+											<span>REM3</span>
+                                        </td>
+                                        <td class="col col-sm column7">
+											<span class="col_com">완료</span>
+                                        </td>
+                                        <td class="col col-sm-2 column8">
+                                            <span></span>
+										</td>
+									</tr>
+								</tbody>
+                            </table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</section>
+</div>
+</body>
+</html>
