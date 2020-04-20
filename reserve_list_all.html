@@ -48,7 +48,6 @@
 			</div>
 			<div class="lnb_menu">
 				<button type="button" class="btn_lm" onclick="location.href='dashboard.html'">검사실 대기현황</button>
-				<button type="button" class="btn_lm" onclick="location.href='wait_list.html'">수진자 대기현황</button>
 				<button type="button" class="btn_lm" onclick="location.href='cur_progress.html'">수진자 진행현황</button>
 				<button type="button" class="btn_lm_focus">예약 List</button>
 			</div>
@@ -89,139 +88,153 @@
                             <table class="table table_01 table_04 table_all">
 								<thead>
 									<tr class="row">
-										<th class="col-4 col-sm column1">
+										<th class="col-4 col-sm-2 column1">
+											<span>등록번호</span>
+										</th>
+										<th class="col-4 col-sm column2">
 											<span>이름</span>
 										</th>
-										<th class="col-4 col-sm-2 column2">
-											<span>성별/나이</span>
-										</th>
-										<th class="col-4 col-sm column3">
-											<span>검진상태</span>
-                                        </th>
-                                        <th class="col col-sm column4">
+										<th class="col-1 col_blank column3">
 											<span></span>
                                         </th>
-                                        <th class="col col-sm column5">
-											<span></span>
+										<th class="col-3 col-sm column4">
+											<span>나이/성별</span>
                                         </th>
-                                        <th class="col col-sm column6">
-											<span></span>
+                                        <th class="col-4 col-sm column5">
+											<span>내원확인시간</span>
                                         </th>
-                                        <th class="col col-sm column7">
+                                        <th class="col-4 col-sm column6">
 											<span>상태</span>
                                         </th>
-                                        <th class="col col-sm-2 column8">
-											<span></span>
-										</th>
+                                        <th class="col-1 col-sm-2 column7">
+											<span>VIP</span>
+                                        </th>
+                                        <th class="col-3 col-sm-2 column8">
+											<span>내원확인</span>
+                                        </th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr class="row">
-                                        <td class="col-4 col-sm column1">
+                                        <td class="col-4 col-sm-2 column1">
+											<span>02345678</span>
+										</td>
+										<td class="col-4 col-sm column2">
 											<span>홍길동</span>
 										</td>
-										<td class="col-4 col-sm-2 column2">
-											<span>남/1999-01-01</span>
+										<td class="col-1 col_blank column3">
+											<span></span>
 										</td>
-										<td class="col-4 col-sm column3">
-											<span>종합검진</span>
+										<td class="col-3 col-sm column4">
+											<span>29/남</span>
                                         </td>
-                                        <td class="col col-sm column4">
-											<span>REM1</span>
+                                        <td class="col-4 col-sm column5">
+											<span>13:02</span>
                                         </td>
-                                        <td class="col col-sm column5">
-											<span>REM2</span>
-                                        </td>
-                                        <td class="col col-sm column6">
-											<span>REM3</span>
-                                        </td>
-                                        <td class="col col-sm column7">
+                                        <td class="col-4 col-sm column6">
 											<span class="col_arr">도착</span>
                                         </td>
-                                        <td class="col col-sm-2 column8">
-                                            <span></span>
+                                        <td class="col-1 col-sm-2 column7">
+											<div class="ck_box">
+												
+											</div>
+                                        </td>
+										<td class="col-3 col-sm-2 column8">
+                                            <div class="arrive">
+                                               
+                                            </div>
 										</td>
                                     </tr>
                                     <tr class="row">
-                                        <td class="col-4 col-sm column1">
+										<td class="col-4 col-sm-2 column1">
+											<span>02345678</span>
+										</td>
+										<td class="col-4 col-sm column2">
 											<span>홍길동</span>
 										</td>
-										<td class="col-4 col-sm-2 column2">
-											<span>남/1999-01-01</span>
+										<td class="col-1 col_blank column3">
+											<span></span>
 										</td>
-										<td class="col-4 col-sm column3">
-											<span>종합검진</span>
+										<td class="col-3 col-sm column4">
+											<span>29/남</span>
                                         </td>
-                                        <td class="col col-sm column4">
-											<span>REM1</span>
+                                        <td class="col-4 col-sm column5">
+											<span>13:02</span>
                                         </td>
-                                        <td class="col col-sm column5">
-											<span>REM2</span>
-                                        </td>
-                                        <td class="col col-sm column6">
-											<span>REM3</span>
-                                        </td>
-                                        <td class="col col-sm column7">
+                                        <td class="col-4 col-sm column6">
 											<span class="col_not">미도착</span>
                                         </td>
-                                        <td class="col  col-sm-2 column8">
+                                        <td class="col-1 col-sm-2 column7">
+											<div class="ck_box">
+												<input type="checkbox" class="vip_chk" name="vip_chk" value="vip">
+											</div>
+                                        </td>
+										<td class="col-3 col-sm-2 column8">
                                             <div class="arrive">
                                                 <button type="button" class="chk_button">
-                                                    <div>도착확인</div>
+                                                    <div>내원확인</div>
                                                 </button>
                                             </div>
 										</td>
                                     </tr>
                                     <tr class="row">
-                                        <td class="col-4 col-sm column1">
+                                        <td class="col-4 col-sm-2 column1">
+											<span>02345678</span>
+										</td>
+										<td class="col-4 col-sm column2">
 											<span>홍길동</span>
 										</td>
-										<td class="col-4 col-sm-2 column2">
-											<span>남/1999-01-01</span>
+										<td class="col-1 col_blank column3">
+											<span></span>
 										</td>
-										<td class="col-4 col-sm column3">
-											<span>종합검진</span>
+										<td class="col-3 col-sm column4">
+											<span>29/남</span>
                                         </td>
-                                        <td class="col col-sm column4">
-											<span>REM1</span>
+                                        <td class="col-4 col-sm column5">
+											<span>13:02</span>
                                         </td>
-                                        <td class="col col-sm column5">
-											<span>REM2</span>
-                                        </td>
-                                        <td class="col col-sm column6">
-											<span>REM3</span>
-                                        </td>
-                                        <td class="col col-sm column7">
+                                        <td class="col-4 col-sm column6">
 											<span class="col_com">완료</span>
                                         </td>
-                                        <td class="col col-sm-2 column8">
-                                            <span></span>
+                                        <td class="col-1 col-sm-2 column7">
+											<div class="ck_box">
+												
+											</div>
+                                        </td>
+										<td class="col-3 col-sm-2 column8">
+                                            <div class="arrive">
+                                                
+                                            </div>
 										</td>
                                     </tr>
                                     <tr class="row">
-                                        <td class="col-4 col-sm column1">
+                                        <td class="col-4 col-sm-2 column1">
+											<span>02345678</span>
+										</td>
+										<td class="col-4 col-sm column2">
 											<span>홍길동</span>
 										</td>
-										<td class="col-4 col-sm-2 column2">
-											<span>남/1999-01-01</span>
+										<td class="col-1 col_blank column3">
+											<span></span>
 										</td>
-										<td class="col-4 col-sm column3">
-											<span>종합검진</span>
+										<td class="col-3 col-sm column4">
+											<span>29/남</span>
                                         </td>
-                                        <td class="col col-sm column4">
-											<span>REM1</span>
+                                        <td class="col-4 col-sm column5">
+											<span>13:02</span>
                                         </td>
-                                        <td class="col col-sm column5">
-											<span>REM2</span>
-                                        </td>
-                                        <td class="col col-sm column6">
-											<span>REM3</span>
-                                        </td>
-                                        <td class="col col-sm column7">
+                                        <td class="col-4 col-sm column6">
 											<span class="col_dur">검진중</span>
                                         </td>
-                                        <td class="col col-sm-2 column8">
-                                            <span></span>
+                                        <td class="col-1 col-sm-2 column7">
+											<div class="ck_box">
+												
+											</div>
+                                        </td>
+										<td class="col-3 col-sm-2 column8">
+                                            <div class="arrive">
+                                                
+                                            </div>
 										</td>
 									</tr>
 								</tbody>
@@ -229,149 +242,157 @@
                             <table class="table table_01 table_04 table_not">
 								<thead>
 									<tr class="row">
-										<th class="col-4 col-sm column1">
+										<th class="col-4 col-sm-2 column1">
+											<span>등록번호</span>
+										</th>
+										<th class="col-4 col-sm column2">
 											<span>이름</span>
 										</th>
-										<th class="col-4 col-sm-2 column2">
-											<span>성별/나이</span>
-										</th>
-										<th class="col-4 col-sm column3">
-											<span>검진상태</span>
-                                        </th>
-                                        <th class="col col-sm column4">
+										<th class="col-1 col_blank column3">
 											<span></span>
                                         </th>
-                                        <th class="col col-sm column5">
-											<span></span>
+										<th class="col-3 col-sm column4">
+											<span>나이/성별</span>
                                         </th>
-                                        <th class="col col-sm column6">
-											<span></span>
+                                        <th class="col-4 col-sm column5">
+											<span>내원확인시간</span>
                                         </th>
-                                        <th class="col col-sm column7">
+                                        <th class="col-4 col-sm column6">
 											<span>상태</span>
                                         </th>
-                                        <th class="col col-sm-2 column8">
-											<span></span>
-										</th>
+                                        <th class="col-1 col-sm-2 column7">
+											<span>VIP</span>
+                                        </th>
+                                        <th class="col-3 col-sm-2 column8">
+											<span>내원확인</span>
+                                        </th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr class="row">
-                                        <td class="col-4 col-sm column1">
+                                        <td class="col-4 col-sm-2 column1">
+											<span>02345678</span>
+										</td>
+										<td class="col-4 col-sm column2">
 											<span>홍길동</span>
 										</td>
-										<td class="col-4 col-sm-2 column2">
-											<span>남/1999-01-01</span>
+										<td class="col-1 col_blank column3">
+											<span></span>
 										</td>
-										<td class="col-4 col-sm column3">
-											<span>종합검진</span>
+										<td class="col-3 col-sm column4">
+											<span>29/남</span>
                                         </td>
-                                        <td class="col col-sm column4">
-											<span>REM1</span>
+                                        <td class="col-4 col-sm column5">
+											<span>13:02</span>
                                         </td>
-                                        <td class="col col-sm column5">
-											<span>REM2</span>
-                                        </td>
-                                        <td class="col col-sm column6">
-											<span>REM3</span>
-                                        </td>
-                                        <td class="col col-sm column7">
+                                        <td class="col-4 col-sm column6">
 											<span class="col_not">미도착</span>
                                         </td>
-                                        <td class="col col-sm-2 column8">
+                                        <td class="col-1 col-sm-2 column7">
+											<div class="ck_box">
+												<input type="checkbox" class="vip_chk" name="vip_chk" value="vip">
+											</div>
+                                        </td>
+										<td class="col-3 col-sm-2 column8">
                                             <div class="arrive">
                                                 <button type="button" class="chk_button">
-                                                    <div>도착확인</div>
+                                                    <div>내원확인</div>
                                                 </button>
                                             </div>
 										</td>
                                     </tr>
                                     <tr class="row">
-                                        <td class="col-4 col-sm column1">
+										<td class="col-4 col-sm-2 column1">
+											<span>02345678</span>
+										</td>
+										<td class="col-4 col-sm column2">
 											<span>홍길동</span>
 										</td>
-										<td class="col-4 col-sm-2 column2">
-											<span>남/1999-01-01</span>
+										<td class="col-1 col_blank column3">
+											<span></span>
 										</td>
-										<td class="col-4 col-sm column3">
-											<span>종합검진</span>
+										<td class="col-3 col-sm column4">
+											<span>29/남</span>
                                         </td>
-                                        <td class="col col-sm column4">
-											<span>REM1</span>
+                                        <td class="col-4 col-sm column5">
+											<span>13:02</span>
                                         </td>
-                                        <td class="col col-sm column5">
-											<span>REM2</span>
-                                        </td>
-                                        <td class="col col-sm column6">
-											<span>REM3</span>
-                                        </td>
-                                        <td class="col col-sm column7">
+                                        <td class="col-4 col-sm column6">
 											<span class="col_not">미도착</span>
                                         </td>
-                                        <td class="col col-sm-2 column8">
+                                        <td class="col-1 col-sm-2 column7">
+											<div class="ck_box">
+												<input type="checkbox" class="vip_chk" name="vip_chk" value="vip">
+											</div>
+                                        </td>
+										<td class="col-3 col-sm-2 column8">
                                             <div class="arrive">
                                                 <button type="button" class="chk_button">
-                                                    <div>도착확인</div>
+                                                    <div>내원확인</div>
                                                 </button>
                                             </div>
 										</td>
                                     </tr>
                                     <tr class="row">
-                                        <td class="col-4 col-sm column1">
+                                        <td class="col-4 col-sm-2 column1">
+											<span>02345678</span>
+										</td>
+										<td class="col-4 col-sm column2">
 											<span>홍길동</span>
 										</td>
-										<td class="col-4 col-sm-2 column2">
-											<span>남/1999-01-01</span>
+										<td class="col-1 col_blank column3">
+											<span></span>
 										</td>
-										<td class="col-4 col-sm column3">
-											<span>종합검진</span>
+										<td class="col-3 col-sm column4">
+											<span>29/남</span>
                                         </td>
-                                        <td class="col col-sm column4">
-											<span>REM1</span>
+                                        <td class="col-4 col-sm column5">
+											<span>13:02</span>
                                         </td>
-                                        <td class="col col-sm column5">
-											<span>REM2</span>
-                                        </td>
-                                        <td class="col col-sm column6">
-											<span>REM3</span>
-                                        </td>
-                                        <td class="col col-sm column7">
+                                        <td class="col-4 col-sm column6">
 											<span class="col_not">미도착</span>
                                         </td>
-                                        <td class="col col-sm-2 column8">
+                                        <td class="col-1 col-sm-2 column7">
+											<div class="ck_box">
+												<input type="checkbox" class="vip_chk" name="vip_chk" value="vip">
+											</div>
+                                        </td>
+										<td class="col-3 col-sm-2 column8">
                                             <div class="arrive">
                                                 <button type="button" class="chk_button">
-                                                    <div>도착확인</div>
+                                                    <div>내원확인</div>
                                                 </button>
                                             </div>
 										</td>
                                     </tr>
                                     <tr class="row">
-                                        <td class="col-4 col-sm column1">
+                                        <td class="col-4 col-sm-2 column1">
+											<span>02345678</span>
+										</td>
+										<td class="col-4 col-sm column2">
 											<span>홍길동</span>
 										</td>
-										<td class="col-4 col-sm-2 column2">
-											<span>남/1999-01-01</span>
+										<td class="col-1 col_blank column3">
+											<span></span>
 										</td>
-										<td class="col-4 col-sm column3">
-											<span>종합검진</span>
+										<td class="col-3 col-sm column4">
+											<span>29/남</span>
                                         </td>
-                                        <td class="col col-sm column4">
-											<span>REM1</span>
+                                        <td class="col-4 col-sm column5">
+											<span>13:02</span>
                                         </td>
-                                        <td class="col col-sm column5">
-											<span>REM2</span>
-                                        </td>
-                                        <td class="col col-sm column6">
-											<span>REM3</span>
-                                        </td>
-                                        <td class="col col-sm column7">
+                                        <td class="col-4 col-sm column6">
 											<span class="col_not">미도착</span>
                                         </td>
-                                        <td class="col col-sm-2 column8">
+                                        <td class="col-1 col-sm-2 column7">
+											<div class="ck_box">
+												<input type="checkbox" class="vip_chk" name="vip_chk" value="vip">
+											</div>
+                                        </td>
+										<td class="col-3 col-sm-2 column8">
                                             <div class="arrive">
                                                 <button type="button" class="chk_button">
-                                                    <div>도착확인</div>
+                                                    <div>내원확인</div>
                                                 </button>
                                             </div>
 										</td>
@@ -381,135 +402,151 @@
                             <table class="table table_01 table_04 table_arr">
 								<thead>
 									<tr class="row">
-										<th class="col-4 col-sm column1">
+										<th class="col-4 col-sm-2 column1">
+											<span>등록번호</span>
+										</th>
+										<th class="col-4 col-sm column2">
 											<span>이름</span>
 										</th>
-										<th class="col-4 col-sm-2 column2">
-											<span>성별/나이</span>
-										</th>
-										<th class="col-4 col-sm column3">
-											<span>검진상태</span>
-                                        </th>
-                                        <th class="col col-sm column4">
+										<th class="col-1 col_blank column3">
 											<span></span>
                                         </th>
-                                        <th class="col col-sm column5">
-											<span></span>
+										<th class="col-3 col-sm column4">
+											<span>나이/성별</span>
                                         </th>
-                                        <th class="col col-sm column6">
-											<span></span>
+                                        <th class="col-4 col-sm column5">
+											<span>내원확인시간</span>
                                         </th>
-                                        <th class="col col-sm column7">
+                                        <th class="col-4 col-sm column6">
 											<span>상태</span>
                                         </th>
-                                        <th class="col col-sm-2 column8">
-											<span></span>
-										</th>
+                                        <th class="col-1 col-sm-2 column7">
+											<span>VIP</span>
+                                        </th>
+                                        <th class="col-3 col-sm-2 column8">
+											<span>내원확인</span>
+                                        </th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr class="row">
-                                        <td class="col-4 col-sm column1">
+                                        <td class="col-4 col-sm-2 column1">
+											<span>02345678</span>
+										</td>
+										<td class="col-4 col-sm column2">
 											<span>홍길동</span>
 										</td>
-										<td class="col-4 col-sm-2 column2">
-											<span>남/1999-01-01</span>
+										<td class="col-1 col_blank column3">
+											<span></span>
 										</td>
-										<td class="col-4 col-sm column3">
-											<span>종합검진</span>
+										<td class="col-3 col-sm column4">
+											<span>29/남</span>
                                         </td>
-                                        <td class="col col-sm column4">
-											<span>REM1</span>
+                                        <td class="col-4 col-sm column5">
+											<span>13:02</span>
                                         </td>
-                                        <td class="col col-sm column5">
-											<span>REM2</span>
-                                        </td>
-                                        <td class="col col-sm column6">
-											<span>REM3</span>
-                                        </td>
-                                        <td class="col col-sm column7">
+                                        <td class="col-4 col-sm column6">
 											<span class="col_arr">도착</span>
                                         </td>
-                                        <td class="col col-sm-2 column8">
-                                            <span></span>
+                                        <td class="col-1 col-sm-2 column7">
+											<div class="ck_box">
+												
+											</div>
+                                        </td>
+										<td class="col-3 col-sm-2 column8">
+                                            <div class="arrive">
+                                               
+                                            </div>
 										</td>
                                     </tr>
                                     <tr class="row">
-                                        <td class="col-4 col-sm column1">
+										<td class="col-4 col-sm-2 column1">
+											<span>02345678</span>
+										</td>
+										<td class="col-4 col-sm column2">
 											<span>홍길동</span>
 										</td>
-										<td class="col-4 col-sm-2 column2">
-											<span>남/1999-01-01</span>
+										<td class="col-1 col_blank column3">
+											<span></span>
 										</td>
-										<td class="col-4 col-sm column3">
-											<span>종합검진</span>
+										<td class="col-3 col-sm column4">
+											<span>29/남</span>
                                         </td>
-                                        <td class="col col-sm column4">
-											<span>REM1</span>
+                                        <td class="col-4 col-sm column5">
+											<span>13:02</span>
                                         </td>
-                                        <td class="col col-sm column5">
-											<span>REM2</span>
-                                        </td>
-                                        <td class="col col-sm column6">
-											<span>REM3</span>
-                                        </td>
-                                        <td class="col col-sm column7">
+                                        <td class="col-4 col-sm column6">
 											<span class="col_arr">도착</span>
                                         </td>
-                                        <td class="col col-sm-2 column8">
-                                            <span></span>
+                                        <td class="col-1 col-sm-2 column7">
+											<div class="ck_box">
+												
+											</div>
+                                        </td>
+										<td class="col-3 col-sm-2 column8">
+                                            <div class="arrive">
+                                               
+                                            </div>
 										</td>
                                     </tr>
                                     <tr class="row">
-                                        <td class="col-4 col-sm column1">
+                                        <td class="col-4 col-sm-2 column1">
+											<span>02345678</span>
+										</td>
+										<td class="col-4 col-sm column2">
 											<span>홍길동</span>
 										</td>
-										<td class="col-4 col-sm-2 column2">
-											<span>남/1999-01-01</span>
+										<td class="col-1 col_blank column3">
+											<span></span>
 										</td>
-										<td class="col-4 col-sm column3">
-											<span>종합검진</span>
+										<td class="col-3 col-sm column4">
+											<span>29/남</span>
                                         </td>
-                                        <td class="col col-sm column4">
-											<span>REM1</span>
+                                        <td class="col-4 col-sm column5">
+											<span>13:02</span>
                                         </td>
-                                        <td class="col col-sm column5">
-											<span>REM2</span>
-                                        </td>
-                                        <td class="col col-sm column6">
-											<span>REM3</span>
-                                        </td>
-                                        <td class="col col-sm column7">
+                                        <td class="col-4 col-sm column6">
 											<span class="col_arr">도착</span>
                                         </td>
-                                        <td class="col col-sm-2 column8">
-                                            <span></span>
+                                        <td class="col-1 col-sm-2 column7">
+											<div class="ck_box">
+												
+											</div>
+                                        </td>
+										<td class="col-3 col-sm-2 column8">
+                                            <div class="arrive">
+                                                
+                                            </div>
 										</td>
                                     </tr>
                                     <tr class="row">
-                                        <td class="col-4 col-sm column1">
+                                        <td class="col-4 col-sm-2 column1">
+											<span>02345678</span>
+										</td>
+										<td class="col-4 col-sm column2">
 											<span>홍길동</span>
 										</td>
-										<td class="col-4 col-sm-2 column2">
-											<span>남/1999-01-01</span>
+										<td class="col-1 col_blank column3">
+											<span></span>
 										</td>
-										<td class="col-4 col-sm column3">
-											<span>종합검진</span>
+										<td class="col-3 col-sm column4">
+											<span>29/남</span>
                                         </td>
-                                        <td class="col col-sm column4">
-											<span>REM1</span>
+                                        <td class="col-4 col-sm column5">
+											<span>13:02</span>
                                         </td>
-                                        <td class="col col-sm column5">
-											<span>REM2</span>
-                                        </td>
-                                        <td class="col col-sm column6">
-											<span>REM3</span>
-                                        </td>
-                                        <td class="col col-sm column7">
+                                        <td class="col-4 col-sm column6">
 											<span class="col_arr">도착</span>
                                         </td>
-                                        <td class="col col-sm-2 column8">
-                                            <span></span>
+                                        <td class="col-1 col-sm-2 column7">
+											<div class="ck_box">
+												
+											</div>
+                                        </td>
+										<td class="col-3 col-sm-2 column8">
+                                            <div class="arrive">
+                                                
+                                            </div>
 										</td>
 									</tr>
 								</tbody>
@@ -517,135 +554,151 @@
                             <table class="table table_01 table_04 table_dur">
 								<thead>
 									<tr class="row">
-										<th class="col-4 col-sm column1">
+										<th class="col-4 col-sm-2 column1">
+											<span>등록번호</span>
+										</th>
+										<th class="col-4 col-sm column2">
 											<span>이름</span>
 										</th>
-										<th class="col-4 col-sm-2 column2">
-											<span>성별/나이</span>
-										</th>
-										<th class="col-4 col-sm column3">
-											<span>검진상태</span>
-                                        </th>
-                                        <th class="col col-sm column4">
+										<th class="col-1 col_blank column3">
 											<span></span>
                                         </th>
-                                        <th class="col col-sm column5">
-											<span></span>
+										<th class="col-3 col-sm column4">
+											<span>나이/성별</span>
                                         </th>
-                                        <th class="col col-sm column6">
-											<span></span>
+                                        <th class="col-4 col-sm column5">
+											<span>내원확인시간</span>
                                         </th>
-                                        <th class="col col-sm column7">
+                                        <th class="col-4 col-sm column6">
 											<span>상태</span>
                                         </th>
-                                        <th class="col col-sm-2 column8">
-											<span></span>
-										</th>
+                                        <th class="col-1 col-sm-2 column7">
+											<span>VIP</span>
+                                        </th>
+                                        <th class="col-3 col-sm-2 column8">
+											<span>내원확인</span>
+                                        </th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr class="row">
-                                        <td class="col-4 col-sm column1">
+                                        <td class="col-4 col-sm-2 column1">
+											<span>02345678</span>
+										</td>
+										<td class="col-4 col-sm column2">
 											<span>홍길동</span>
 										</td>
-										<td class="col-4 col-sm-2 column2">
-											<span>남/1999-01-01</span>
+										<td class="col-1 col_blank column3">
+											<span></span>
 										</td>
-										<td class="col-4 col-sm column3">
-											<span>종합검진</span>
+										<td class="col-3 col-sm column4">
+											<span>29/남</span>
                                         </td>
-                                        <td class="col col-sm column4">
-											<span>REM1</span>
+                                        <td class="col-4 col-sm column5">
+											<span>13:02</span>
                                         </td>
-                                        <td class="col col-sm column5">
-											<span>REM2</span>
-                                        </td>
-                                        <td class="col col-sm column6">
-											<span>REM3</span>
-                                        </td>
-                                        <td class="col col-sm column7">
+										<td class="col-4 col-sm column6">
 											<span class="col_dur">검진중</span>
                                         </td>
-                                        <td class="col col-sm-2 column8">
-                                            <span></span>
+                                        <td class="col-1 col-sm-2 column7">
+											<div class="ck_box">
+												
+											</div>
+                                        </td>
+										<td class="col-3 col-sm-2 column8">
+                                            <div class="arrive">
+                                               
+                                            </div>
 										</td>
                                     </tr>
                                     <tr class="row">
-                                        <td class="col-4 col-sm column1">
+										<td class="col-4 col-sm-2 column1">
+											<span>02345678</span>
+										</td>
+										<td class="col-4 col-sm column2">
 											<span>홍길동</span>
 										</td>
-										<td class="col-4 col-sm-2 column2">
-											<span>남/1999-01-01</span>
+										<td class="col-1 col_blank column3">
+											<span></span>
 										</td>
-										<td class="col-4 col-sm column3">
-											<span>종합검진</span>
+										<td class="col-3 col-sm column4">
+											<span>29/남</span>
                                         </td>
-                                        <td class="col col-sm column4">
-											<span>REM1</span>
+                                        <td class="col-4 col-sm column5">
+											<span>13:02</span>
                                         </td>
-                                        <td class="col col-sm column5">
-											<span>REM2</span>
-                                        </td>
-                                        <td class="col col-sm column6">
-											<span>REM3</span>
-                                        </td>
-                                        <td class="col col-sm column7">
+										<td class="col-4 col-sm column6">
 											<span class="col_dur">검진중</span>
                                         </td>
-                                        <td class="col col-sm-2 column8">
-                                            <span></span>
+                                        <td class="col-1 col-sm-2 column7">
+											<div class="ck_box">
+												
+											</div>
+                                        </td>
+										<td class="col-3 col-sm-2 column8">
+                                            <div class="arrive">
+                                               
+                                            </div>
 										</td>
                                     </tr>
                                     <tr class="row">
-                                        <td class="col-4 col-sm column1">
+                                        <td class="col-4 col-sm-2 column1">
+											<span>02345678</span>
+										</td>
+										<td class="col-4 col-sm column2">
 											<span>홍길동</span>
 										</td>
-										<td class="col-4 col-sm-2 column2">
-											<span>남/1999-01-01</span>
+										<td class="col-1 col_blank column3">
+											<span></span>
 										</td>
-										<td class="col-4 col-sm column3">
-											<span>종합검진</span>
+										<td class="col-3 col-sm column4">
+											<span>29/남</span>
                                         </td>
-                                        <td class="col col-sm column4">
-											<span>REM1</span>
+                                        <td class="col-4 col-sm column5">
+											<span>13:02</span>
                                         </td>
-                                        <td class="col col-sm column5">
-											<span>REM2</span>
-                                        </td>
-                                        <td class="col col-sm column6">
-											<span>REM3</span>
-                                        </td>
-                                        <td class="col col-sm column7">
+										<td class="col-4 col-sm column6">
 											<span class="col_dur">검진중</span>
                                         </td>
-                                        <td class="col col-sm-2 column8">
-                                            <span></span>
+                                        <td class="col-1 col-sm-2 column7">
+											<div class="ck_box">
+												
+											</div>
+                                        </td>
+										<td class="col-3 col-sm-2 column8">
+                                            <div class="arrive">
+                                                
+                                            </div>
 										</td>
                                     </tr>
                                     <tr class="row">
-                                        <td class="col-4 col-sm column1">
+                                        <td class="col-4 col-sm-2 column1">
+											<span>02345678</span>
+										</td>
+										<td class="col-4 col-sm column2">
 											<span>홍길동</span>
 										</td>
-										<td class="col-4 col-sm-2 column2">
-											<span>남/1999-01-01</span>
+										<td class="col-1 col_blank column3">
+											<span></span>
 										</td>
-										<td class="col-4 col-sm column3">
-											<span>종합검진</span>
+										<td class="col-3 col-sm column4">
+											<span>29/남</span>
                                         </td>
-                                        <td class="col col-sm column4">
-											<span>REM1</span>
+                                        <td class="col-4 col-sm column5">
+											<span>13:02</span>
                                         </td>
-                                        <td class="col col-sm column5">
-											<span>REM2</span>
-                                        </td>
-                                        <td class="col col-sm column6">
-											<span>REM3</span>
-                                        </td>
-                                        <td class="col col-sm column7">
+                                        <td class="col-4 col-sm column6">
 											<span class="col_dur">검진중</span>
                                         </td>
-                                        <td class="col col-sm-2 column8">
-                                            <span></span>
+                                        <td class="col-1 col-sm-2 column7">
+											<div class="ck_box">
+												
+											</div>
+                                        </td>
+										<td class="col-3 col-sm-2 column8">
+                                            <div class="arrive">
+                                                
+                                            </div>
 										</td>
 									</tr>
 								</tbody>
@@ -653,135 +706,151 @@
                             <table class="table table_01 table_04 table_com">
 								<thead>
 									<tr class="row">
-										<th class="col-4 col-sm column1">
+										<th class="col-4 col-sm-2 column1">
+											<span>등록번호</span>
+										</th>
+										<th class="col-4 col-sm column2">
 											<span>이름</span>
 										</th>
-										<th class="col-4 col-sm-2 column2">
-											<span>성별/나이</span>
-										</th>
-										<th class="col-4 col-sm column3">
-											<span>검진상태</span>
-                                        </th>
-                                        <th class="col col-sm column4">
+										<th class="col-1 col_blank column3">
 											<span></span>
                                         </th>
-                                        <th class="col col-sm column5">
-											<span></span>
+										<th class="col-3 col-sm column4">
+											<span>나이/성별</span>
                                         </th>
-                                        <th class="col col-sm column6">
-											<span></span>
+                                        <th class="col-4 col-sm column5">
+											<span>내원확인시간</span>
                                         </th>
-                                        <th class="col col-sm column7">
+                                        <th class="col-4 col-sm column6">
 											<span>상태</span>
                                         </th>
-                                        <th class="col col-sm-2 column8">
-											<span></span>
-										</th>
+                                        <th class="col-1 col-sm-2 column7">
+											<span>VIP</span>
+                                        </th>
+                                        <th class="col-3 col-sm-2 column8">
+											<span>내원확인</span>
+                                        </th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr class="row">
-                                        <td class="col-4 col-sm column1">
+                                        <td class="col-4 col-sm-2 column1">
+											<span>02345678</span>
+										</td>
+										<td class="col-4 col-sm column2">
 											<span>홍길동</span>
 										</td>
-										<td class="col-4 col-sm-2 column2">
-											<span>남/1999-01-01</span>
+										<td class="col-1 col_blank column3">
+											<span></span>
 										</td>
-										<td class="col-4 col-sm column3">
-											<span>종합검진</span>
+										<td class="col-3 col-sm column4">
+											<span>29/남</span>
                                         </td>
-                                        <td class="col col-sm column4">
-											<span>REM1</span>
+                                        <td class="col-4 col-sm column5">
+											<span>13:02</span>
                                         </td>
-                                        <td class="col col-sm column5">
-											<span>REM2</span>
-                                        </td>
-                                        <td class="col col-sm column6">
-											<span>REM3</span>
-                                        </td>
-                                        <td class="col col-sm column7">
+                                        <td class="col-4 col-sm column6">
 											<span class="col_com">완료</span>
                                         </td>
-                                        <td class="col col-sm-2 column8">
-                                            <span></span>
+                                        <td class="col-1 col-sm-2 column7">
+											<div class="ck_box">
+												
+											</div>
+                                        </td>
+										<td class="col-3 col-sm-2 column8">
+                                            <div class="arrive">
+                                               
+                                            </div>
 										</td>
                                     </tr>
                                     <tr class="row">
-                                        <td class="col-4 col-sm column1">
+										<td class="col-4 col-sm-2 column1">
+											<span>02345678</span>
+										</td>
+										<td class="col-4 col-sm column2">
 											<span>홍길동</span>
 										</td>
-										<td class="col-4 col-sm-2 column2">
-											<span>남/1999-01-01</span>
+										<td class="col-1 col_blank column3">
+											<span></span>
 										</td>
-										<td class="col-4 col-sm column3">
-											<span>종합검진</span>
+										<td class="col-3 col-sm column4">
+											<span>29/남</span>
                                         </td>
-                                        <td class="col col-sm column4">
-											<span>REM1</span>
+                                        <td class="col-4 col-sm column5">
+											<span>13:02</span>
                                         </td>
-                                        <td class="col col-sm column5">
-											<span>REM2</span>
-                                        </td>
-                                        <td class="col col-sm column6">
-											<span>REM3</span>
-                                        </td>
-                                        <td class="col col-sm column7">
+                                        <td class="col-4 col-sm column6">
 											<span class="col_com">완료</span>
                                         </td>
-                                        <td class="col col-sm-2 column8">
-                                            <span></span>
+                                        <td class="col-1 col-sm-2 column7">
+											<div class="ck_box">
+												
+											</div>
+                                        </td>
+										<td class="col-3 col-sm-2 column8">
+                                            <div class="arrive">
+                                               
+                                            </div>
 										</td>
                                     </tr>
                                     <tr class="row">
-                                        <td class="col-4 col-sm column1">
+                                        <td class="col-4 col-sm-2 column1">
+											<span>02345678</span>
+										</td>
+										<td class="col-4 col-sm column2">
 											<span>홍길동</span>
 										</td>
-										<td class="col-4 col-sm-2 column2">
-											<span>남/1999-01-01</span>
+										<td class="col-1 col_blank column3">
+											<span></span>
 										</td>
-										<td class="col-4 col-sm column3">
-											<span>종합검진</span>
+										<td class="col-3 col-sm column4">
+											<span>29/남</span>
                                         </td>
-                                        <td class="col col-sm column4">
-											<span>REM1</span>
+                                        <td class="col-4 col-sm column5">
+											<span>13:02</span>
                                         </td>
-                                        <td class="col col-sm column5">
-											<span>REM2</span>
-                                        </td>
-                                        <td class="col col-sm column6">
-											<span>REM3</span>
-                                        </td>
-                                        <td class="col col-sm column7">
+                                        <td class="col-4 col-sm column6">
 											<span class="col_com">완료</span>
                                         </td>
-                                        <td class="col col-sm-2 column8">
-                                            <span></span>
+                                        <td class="col-1 col-sm-2 column7">
+											<div class="ck_box">
+												
+											</div>
+                                        </td>
+										<td class="col-3 col-sm-2 column8">
+                                            <div class="arrive">
+                                                
+                                            </div>
 										</td>
                                     </tr>
                                     <tr class="row">
-                                        <td class="col-4 col-sm column1">
+                                        <td class="col-4 col-sm-2 column1">
+											<span>02345678</span>
+										</td>
+										<td class="col-4 col-sm column2">
 											<span>홍길동</span>
 										</td>
-										<td class="col-4 col-sm-2 column2">
-											<span>남/1999-01-01</span>
+										<td class="col-1 col_blank column3">
+											<span></span>
 										</td>
-										<td class="col-4 col-sm column3">
-											<span>종합검진</span>
+										<td class="col-3 col-sm column4">
+											<span>29/남</span>
                                         </td>
-                                        <td class="col col-sm column4">
-											<span>REM1</span>
+                                        <td class="col-4 col-sm column5">
+											<span>13:02</span>
                                         </td>
-                                        <td class="col col-sm column5">
-											<span>REM2</span>
-                                        </td>
-                                        <td class="col col-sm column6">
-											<span>REM3</span>
-                                        </td>
-                                        <td class="col col-sm column7">
+                                        <td class="col-4 col-sm column6">
 											<span class="col_com">완료</span>
                                         </td>
-                                        <td class="col col-sm-2 column8">
-                                            <span></span>
+                                        <td class="col-1 col-sm-2 column7">
+											<div class="ck_box">
+												
+											</div>
+                                        </td>
+										<td class="col-3 col-sm-2 column8">
+                                            <div class="arrive">
+                                                
+                                            </div>
 										</td>
 									</tr>
 								</tbody>
