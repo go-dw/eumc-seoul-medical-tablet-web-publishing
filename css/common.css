@@ -19,7 +19,7 @@ time,mark,audio,video{
 	border:0 none; 
 	vertical-align:middle; 
 	font-family:'notokr-regular', sans-serif;
-	color:#323640;
+	color:#272b2f;
 }
 
 ol,ul{list-style:none;}
@@ -109,3 +109,5 @@ select::-ms-expand {display:none;}
 	src: url('../font/NotoSansKR-Bold.eot?#iefix') format('embedded-opentype'), 
 	url('../font/NotoSansKR-Bold.woff') format('woff'),
 }
+.clear::before{content:'';display:block}
+.clear::after{content:'';display:block;clear:both}
