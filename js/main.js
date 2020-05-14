@@ -35,7 +35,7 @@ $(function(){
             $('.dim').hide();
         }, 100);
     });
-    $('.cont').on('click', function(e){
+    $('.dim').on('click', function(e){
 		if(lnb.hasClass('select')) {
             setTimeout(function(){
                 lnb.removeClass('select');
@@ -124,7 +124,7 @@ $(function(){
             $('.dim').hide();
         }, 100);
     });
-    $('.cont').on('click', function(e){
+    $('.dim').on('click', function(e){
         if(arr_popup.hasClass('on')) {
             setTimeout(function(){
                 arr_popup.hide().removeClass('on');
