@@ -21,6 +21,7 @@ time,mark,audio,video{
 	font-family:'notokr-regular', sans-serif;
 	color:#272b2f;
 }
+*{-webkit-text-size-adjust:none}
 
 ol,ul{list-style:none;}
 blockquote,q{quotes:none;}

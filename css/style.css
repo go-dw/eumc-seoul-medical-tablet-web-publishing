@@ -59,11 +59,32 @@ main {
 	height:3em;
 	margin: 1em auto 0;
 	padding:.7em;
+	line-height: 23px;
 	color:#1c1c1c;
 	font-size: 1.5em;
 	font-weight: 700;
 	background-color: #ffffff;
 	border-bottom:2px solid #e0e0e0;
+}
+
+::-webkit-input-placeholder {
+	color: #777;
+	display: block;
+}
+::-moz-placeholder { /* Firefox 19+ */
+	color:  #777;
+	display: block;
+	height: 3em;
+}
+:-ms-input-placeholder {
+	color:  #777;
+	display: block;
+	height: 3em;
+}
+:-moz-placeholder { /* Firefox 18- */
+	color:  #777;
+	display: block;
+	height: 3em;
 }
 .login_form .lf_wrap .login_input:focus,
 .login_form .lf_wrap .login_input2:focus {
@@ -171,7 +192,6 @@ input.search {
 	max-width:320px;
 	background:#00583d;
 	height: 100vh;
-	overflow-y: scroll;
 }
 .lnb .profile {
 	float:left;
@@ -205,7 +225,9 @@ input.search {
 	border:0;
 	outline:none;
 	background-color: #004d35;
-	box-sizing: border-box;
+	box-sizing: content-box;
+	padding: 0;
+	margin: 0 auto;
 }
 .lnb .profile button.btn_logout img{
 	width: 2.3em;
@@ -312,6 +334,7 @@ div::-webkit-scrollbar,nav::-webkit-scrollbar,table::-webkit-scrollbar ,tbody::-
 .table_wrap{
 	height: 87vh;
 	overflow-y: hidden;
+	overflow-x: hidden;
 }
 .table{
 	border:solid 1px #e5e5e5;
@@ -469,6 +492,9 @@ table.table_01 tbody tr:hover,table.table_02 tbody tr:hover{
 	height: 3em;
   	padding: 0;
   	overflow: hidden;
+	-webkit-box-shadow: inset 0px -1px 5px 0px rgba(50, 50, 50, 0.037);
+	-moz-box-shadow:    inset 0px -1px 5px 0px rgba(50, 50, 50, 0.037);
+	box-shadow:         inset 0px -1px 5px 0px rgba(50, 50, 50, 0.037);
 }
 /*ie용 bootstrap col 호환성 코드 & 반응형 colunm 너비 지정*/
 .table_03 tbody tr{
@@ -482,16 +508,15 @@ table.table_01 tbody tr:hover,table.table_02 tbody tr:hover{
 .table_03 tbody tr .column .column_box{
 	width: calc(100% - .4em);
 }
-.table_02_s tbody tr .column{
+.table_popup tbody tr .column{
 	width: 16.66666%;
-	margin: .39% 0;
 }
 .table_02_s tbody tr .column .column_box{
 	width: calc(100% - .5em);
 }
 .table_04 .row th.col-sm,
 .table_04 .row td.col-sm{
-	width: 12.5%;
+	width: 13.33333%;
 }
 /*ie용 bootstrap col 호환성 코드 & 반응형 colunm 너비 지정*/
 
@@ -507,9 +532,15 @@ table.table_01 tbody tr:hover,table.table_02 tbody tr:hover{
 }
 .table_03 tbody tr .column .active_chk{
 	background-color: #05bcaf;
+	-webkit-box-shadow: none;
+	-moz-box-shadow:    none;
+	box-shadow:         none;
 }
 .table_03 tbody tr .column .active_com{
 	background-color: #dedede;
+	-webkit-box-shadow: none;
+	-moz-box-shadow:    none;
+	box-shadow:         none;
 }
 .table_03 tbody tr .column .active_chk span{
 	color: #ffffff;
@@ -517,6 +548,14 @@ table.table_01 tbody tr:hover,table.table_02 tbody tr:hover{
 .table_03 tbody tr .column .active_com span{
 	color: #7b7f83;
 }
+
+.table_03 tbody tr .column .active_call{
+	background-color: lightcoral;
+}
+.table_03 tbody tr .column .active_call span{
+	color: #ffffff;
+}
+
 .table_03 thead .row{
 	padding: .7em 0;
 }
@@ -566,7 +605,7 @@ table.table_01 tbody tr:hover,table.table_02 tbody tr:hover{
 }
 .table_03 thead .row .status span{
 	font-weight: 400;
-	display: block;
+	display: table;
 	padding-right: 100%;
 	word-break: keep-all;
   	white-space: nowrap;
@@ -636,7 +675,8 @@ table.table_01 tbody tr:hover,table.table_02 tbody tr:hover{
 .table .col_blank{
 	display: none;
 }
-.table thead .col_blank:hover{
+.table thead .col_blank:hover,
+.table thead .col_none:hover{
 	background-color: #f6f6f6;
 }
 .table .col_arr{
@@ -768,8 +808,8 @@ div.col_none{
 .arr_popup{
 	width:90%;
 	/*height:100%;*/
-	max-width: 500px;
-	max-height: 580px;
+	max-width: 430px;
+	max-height: 550px;
 	background:#ffffff;
 	position:fixed;
 	top:50%;
@@ -819,6 +859,12 @@ div.col_none{
     font-weight: 700;
     color: #ffffff;
 }
+.arr_popup .arr_yes:hover,
+.arr_popup .arr_yes:active {
+	background:#ffffff;
+	color:#00583d;
+	border: 2px solid #00583d;
+}
 
 /* list checkbox radio btn img */
 .sp {
@@ -837,6 +883,13 @@ div.col_none{
 	background:url('../images/check_radio3.png') no-repeat;
 	background-size: 25px auto;
 	-webkit-background-size: 25px auto;	
+}
+
+#geomjinRoomList .column2 span{
+	color: #ff6c00;
+}
+#geomjinRoomList .column3 span{
+	color: #05c1af;
 }
 
 @media (max-width: 1300px) {
@@ -897,7 +950,7 @@ div.col_none{
 	.table_03 tbody tr .column .column_box{
 		width: calc(100% - .5em);
 	}
-	.table_02_s tbody tr .column{
+	.table_popup tbody tr .column{
 		width: 20%;
 	}
 	.table_02_s tbody tr .column .column_box{
@@ -946,7 +999,7 @@ div.col_none{
 	.table_03 tbody tr .column .column_box span{
 		font-size: 1em;
 	}
-	.table_02_s tbody tr .column{
+	.table_popup tbody tr .column{
 		width: 25%;
 	}
 	.table_02_s tbody tr .column .column_box span{
@@ -965,7 +1018,9 @@ div.col_none{
 
 	}
 	.nav_toggle{
-		
+		width: 100%;
+		height: 3em;
+		display: block;
 	}
 	.nav_toggle img{
 		position: relative;
@@ -1042,8 +1097,23 @@ div.col_none{
 	.table{
 		font-size: 1.39em;
 	}
+	.table_01{
+		font-size: 1.2em;
+	}
 	.table_02{
 		font-size: .95em;
+	}
+	.table_wait th span,
+	.table_wait td span,
+	.table_receipt th span,
+	.table_receipt td span,
+	.table_cur th span,
+	.table_cur td span{
+		font-size: 1.13em;
+	}
+	.table_cur th span,
+	.table_cur td span{
+		font-size: 1.2em;
 	}
 	.table_04{
 		font-size: 1.27em;
@@ -1071,7 +1141,7 @@ div.col_none{
 		font-size: 1.57em;
 	}
 	.thead_wrap .table_02 tr span{
-		font-size: 1em;
+		font-size: .9em;
 	}
 	.table thead th{
 		height: 2.7em;
@@ -1095,9 +1165,9 @@ div.col_none{
 	}
 	/*ie용 bootstrap col 호환성 코드 & 반응형 colunm 너비 지정*/
 	.table_03 tbody tr .column .column_box span{
-		font-size: 1em;
+		font-size: .95em;
 	}
-	.table_02_s tbody tr .column{
+	.table_popup tbody tr .column{
 		width: 25%;
 	}
 	.table_02_s tbody tr .column .column_box span{
@@ -1132,15 +1202,24 @@ div.col_none{
 		height: calc( (85.7vh - 13em - 6px) / 2 );
 	}
 	.table_02{
-		font-size: 1.23em;
+		font-size: 1.13em;
 	}
+	.table_wait th span,
+	.table_wait td span,
+	.table_receipt th span,
+	.table_receipt td span,
+	.table_cur th span,
+	.table_cur td span{
+		font-size: 1.13em;
+	}
+
 	table.table_02_s tbody{
 		height: calc( (85.7vh - 9em - 6px) / 2 );
 	}
 	.table_03 tbody tr .column .column_box span{
 		font-size: .93em;
 	}
-	.table_02_s tbody tr .column{
+	.table_popup tbody tr .column{
 		width: 20%;
 	}
 	.table_02_s tbody tr .column .column_box span{
@@ -1245,6 +1324,14 @@ div.col_none{
 	.table_02{
 		font-size: 1.1em;
 	}
+	.table_wait th span,
+	.table_wait td span,
+	.table_receipt th span,
+	.table_receipt td span,
+	.table_cur th span,
+	.table_cur td span{
+		font-size: 1.1em;
+	}
 	.table_04{
 		font-size: 1.07em;
 	}
@@ -1344,6 +1431,7 @@ div.col_none{
 	.table_04 .row td.col-3{
 		width: 25%;
 	}
+
 	/*ie용 bootstrap col 호환성 코드 & 반응형 colunm 너비 지정*/
 	.table_03 tbody tr .column .column_box span{
 		font-size: .93em;
@@ -1364,7 +1452,22 @@ div.col_none{
 		display: block;
 	}
 	.table .col_blank{
-		display: block;
+		display: table;
+	}
+	.table td.col_blank span{
+		border-bottom: 1px solid #e5e5e5;
+		margin: 0;
+		padding: 0;
+	}
+	.table_04 .row .ck_box{
+		border-bottom: 1px solid #e5e5e5;
+		margin: 0;
+		padding: 0;
+	}
+	.table_02_s .row .td_vip{
+		border-bottom: 1px solid #e5e5e5;
+		margin: 0;
+		padding: 0;
 	}
 	/*ie용 bootstrap col 호환성 코드*/
 	.table_04 .row th.col-4,

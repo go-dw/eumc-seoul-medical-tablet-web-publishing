@@ -1,4 +1,22 @@
 $(function(){
+    // 주소창 숨기기 아이폰인 경우
+    if (navigator.userAgent.indexOf('iPhone') != -1) {
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);    }, false);
+        }
+    //아이폰이 아닌경우
+    else {
+        hideURLbar();
+    }
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    }
+
+    window.addEventListener('load', function(){setTimeout(scrollTo, 0, 0, 1);
+    }, false);
+
+
+    
     var navToggle = $('.nav_toggle'),
     closeToggle = $('.close_toggle'),
     lnb = $('.lnb')
